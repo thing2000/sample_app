@@ -4,45 +4,61 @@
 
 $grayMediumLight: #eaeaea;
 
+@mixin box_sizing 
+{
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
 /* universal */
 
-html {
+html 
+{
   overflow-y: scroll;
 }
 
-body {
+body 
+{
   padding-top: 60px;
 }
 
-section {
+section 
+{
   overflow: auto;
 }
 
-textarea {
+textarea 
+{
   resize: vertical;
 }
 
-.center {
+.center 
+{
   text-align: center;
-  h1 {
+  h1 
+  {
     margin-bottom: 10px;
   }
 }
 
 /* typography */
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 
+{
   line-height: 1;
 }
 
-h1 {
+h1 
+{
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
 }
 
-h2 {
+h2 
+{
   font-size: 1.7em;
   letter-spacing: -1px;
   margin-bottom: 30px;
@@ -51,7 +67,8 @@ h2 {
   color: $grayLight;
 }
 
-p {
+p 
+{
   font-size: 1.1em;
   line-height: 1.7em;
 }
@@ -59,7 +76,8 @@ p {
 
 /* header */
 
-#logo {
+#logo 
+{
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
@@ -69,7 +87,8 @@ p {
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
-  &:hover {
+  &:hover 
+  {
     color: white;
     text-decoration: none;
   }
@@ -77,26 +96,42 @@ p {
 
 /* footer */
 
-footer {
+footer 
+{
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
   color: $grayLight;
-  a {
+  a 
+  {
     color: $gray;
-    &:hover { 
+    &:hover 
+    { 
       color: $grayDarker;
     }
   }  
   small { 
     float: left; 
   }
-  ul {
+  ul 
+  {
     float: right;
     list-style: none;
-    li {
+    li 
+    {
       float: left;
       margin-left: 10px;
     }
   }
+}
+
+/* miscellaneous */
+
+.debug_dump
+{
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
 }
